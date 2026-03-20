@@ -24,3 +24,25 @@ counts = [5, 10, 2]
 
 cost=functools.reduce(lambda x,y:x+y,map(lambda x:x[0]*x[1],zip(prices,counts)))
 print(cost)
+
+# Question (3) Use reduce to create a single string where the words are separated by a hyphen -.
+# (Note: Do not use "-".join(), try to do it with reduce to practice the logic!)
+
+list=['Python','is','awesome']
+
+joined=functools.reduce(lambda x,y:x+'-'+y,list)
+print(joined)
+
+# Question # 4 Create a dictionary where the user_id is the key and the username is the value,
+# but only if the ID is greater than 101.
+
+users = [(101, "j_doe"), (102, "s_smith"), (105, "a_jones")]
+
+d={key:value for key,value in users if key>101}
+print(d)
+
+#Matrix Flattener
+
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+even_list=[num for row in matrix for num in row if num%2==0]
+print(even_list)
