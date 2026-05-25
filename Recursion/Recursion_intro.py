@@ -13,7 +13,7 @@ print(multiply(10,67))
 #factorial using recursion
 
 def factorial(num):
-    if num==1:
+    if num==1 or num==0:
         return 1
     else:
         return num * factorial(num-1)
